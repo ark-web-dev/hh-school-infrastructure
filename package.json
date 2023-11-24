@@ -8,6 +8,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --color",
     "lint:fix": "eslint --fix . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --color",
+    "stylelint": "stylelint '**/*{.css,.scss,.less}'",
+    "stylelint:fix": "stylelint '**/*{.css,.scss,.less}' --fix",
     "preview": "vite preview",
     "prepare": "husky install"
   },
@@ -15,7 +17,8 @@
     "*.{js,ts,tsx,jsx}": [
       "prettier --write",
       "yarn run lint:fix"
-    ]
+    ],
+    "*.{css,scss,less}": "yarn run stylelint:fix"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -40,6 +43,8 @@
     "husky": "^8.0.0",
     "lint-staged": "^15.1.0",
     "prettier": "^3.1.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   }
