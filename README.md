@@ -1,30 +1,18 @@
-# React + TypeScript + Vite
+# Бандлер: Vite + React + TS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite выбрал для разнообразия, до этого приходилось сталкиваться только с Webpack. Ради интереса, устанавливал через `npm create vite@latest`. \
+По ощущениям, Vite работает действительно быстрее :)
 
-Currently, two official plugins are available:
+## Дополнительно установил и настроил:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+eslint (eslint-config-airbnb + plugins) \
+stylelint (stylelint-config-standard) \
+prettier \
+lint-staged \
+husky \
+gh-pages
 
-## Expanding the ESLint configuration
+## Итого
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Каких то больших сложностей в настройке Vite и выбранных(в итоге) конфигов не возникло. Было несколько не совсем очевидных проблем и ошибок, которые решились до настройкой файлов `vite.config.ts` и `tsconfig.json`. С деплоем и pre-commit тоже проблем не возникло, настраиваются довольно легко. \
+(Пробовал настроить HH конфиги, но, из-за нехватки времени решил отложить до лучших времен...)
